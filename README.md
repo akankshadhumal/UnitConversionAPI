@@ -143,7 +143,7 @@ dotnet --list-sdks
 
 1.  Open `UnitConversionAPI.csproj` directly in Visual Studio.
 2.  Run the project using the `http` launch profile.
-3.  The configured HTTP address is `http://localhost:5197`.
+3.  The configured HTTP address is `http://localhost:7018`.
 
 **Note:** The included `UnitConversionAPI.sln` references a separate
 `UnitConversion.Api.Tests` project that was not present in the uploaded
