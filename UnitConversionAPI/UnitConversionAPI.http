@@ -1,0 +1,49 @@
+@testAPI_HostAddress = http://localhost:5023
+
+GET {{testAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+
+@baseUrl = http://localhost:5023
+
+### Convert meters to feet
+POST {{baseUrl}}/api/conversions
+Content-Type: application/json
+
+{
+  "value": 10,
+  "fromUnit": "m",
+  "toUnit": "ft"
+}
+
+### Convert Celsius to Fahrenheit
+POST {{baseUrl}}/api/conversions
+Content-Type: application/json
+
+{
+  "value": 25,
+  "fromUnit": "c",
+  "toUnit": "f"
+}
+
+### Convert kilograms to pounds
+POST {{baseUrl}}/api/conversions
+Content-Type: application/json
+
+{
+  "value": 5,
+  "fromUnit": "kg",
+  "toUnit": "lb"
+}
+
+### Invalid conversion
+POST {{baseUrl}}/api/conversions
+Content-Type: application/json
+
+{
+  "value": 10,
+  "fromUnit": "m",
+  "toUnit": "kg"
+}
